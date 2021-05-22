@@ -1,4 +1,5 @@
-# /node_modules/* and /bower_components/* in the project root are ignored by default
+# Files in /src which don't require linting
 
-.eslintrc.js
-build
+reportWebVitals.ts
+setupTests.js
+react-app-env.d.ts
