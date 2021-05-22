@@ -1,0 +1,55 @@
+module.exports = {
+  env: {
+    browser: true,
+    es6: true,
+  },
+  parser: "@typescript-eslint/parser",
+  extends: [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/recommended",
+  ],
+  parserOptions: {
+    ecmaFeatures: {
+      jsx: true,
+    },
+    ecmaVersion: 2018,
+    sourceType: "module",
+  },
+  rules: {
+    "arrow-parens": "off",
+    "eol-last": 2,
+    "no-case-declarations": "off",
+    "no-console": [1, { allow: ["warn", "info", "error"] }],
+    "no-fallthrough": "off",
+    "no-prototype-builtins": "off",
+    "no-unused-vars": 1,
+    "react/no-unescaped-entities": "off",
+    "react/prop-types": "off",
+    "react/react-in-jsx-scope": "off",
+  },
+  settings: {
+    react: {
+      createClass: "createReactClass",
+      pragma: "React",
+      version: "detect",
+    },
+  },
+  globals: {
+    Atomics: "readonly",
+    SharedArrayBuffer: "readonly",
+    afterEach: true,
+    beforeAll: true,
+    beforeEach: true,
+    describe: true,
+    document: true,
+    expect: true,
+    global: true,
+    jest: true,
+    process: true,
+    require: true,
+    test: true,
+    window: true,
+  },
+  plugins: ["react", "@typescript-eslint"],
+};
