@@ -2,7 +2,7 @@
 
 ## UI
 
-1. [Pick a font theme](https://fonts.google.com/)
+1. ~~[Pick a font theme](https://fonts.google.com/)~~
 2. Pick a colour theme
    1. <https://coolors.co>
    2. <https://www.eggradients.com/>

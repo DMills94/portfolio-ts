@@ -1,5 +1,19 @@
+@import "styles/fonts.scss";
+
 *,
 *::before,
 *:after {
   box-sizing: border-box;
+}
+
+body {
+  font-family: $openSans;
+}
+
+h1, h2 {
+  font-family: $farro;
+}
+
+.code {
+  font-family: $mono;
 }
