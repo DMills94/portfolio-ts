@@ -1,5 +1,5 @@
 @import-normalize;
-@import "styles/globals.scss";
+@import "styles/fonts.scss";
 
 *,
 *::before,
@@ -8,30 +8,10 @@
 }
 
 body {
-  @include background-gradient;
-  color: $grey;
-  font-family: $openSans;
-  line-height: 1.5;
   min-height: 100vh;
-}
-
-h1, h2, h3, h4, p {
   margin: 0;
 }
 
-h1 {
-  font-size: 3rem;
-}
-
-p {
-  font-size: 1rem;
-}
-
-.farro {
-  color: $yellow;
-  font-family: $farro;
-}
-
-.code {
-  font-family: $mono;
+.letter {
+  font-size: 150px;
 }
