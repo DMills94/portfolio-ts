@@ -18,10 +18,11 @@ interface Colours {
   readonly yellow: string,
 }
 
-interface Theme {
+export interface Theme {
   readonly background: Background,
   readonly colours: Colours,
   readonly fonts: Fonts,
+  readonly name: string,
 }
 
 export const colours: Colours = {
@@ -39,13 +40,14 @@ export const darkTheme: Theme = {
   },
   colours: {
     ...colours,
-    font: colours.white, 
+    font: colours.white,
   },
   fonts: {
     farro: "'Farro', sans-serif",
     mono: "'Source Code Pro', monospace",
     openSans: "'Open Sans', sans-serif",
-  }
+  },
+  name: "dark",
 }
 
 export const lightTheme: Theme = {
@@ -61,5 +63,6 @@ export const lightTheme: Theme = {
     farro: "'Farro', sans-serif",
     mono: "'Source Code Pro', monospace",
     openSans: "'Open Sans', sans-serif",
-  }
+  },
+  name: "light",
 }

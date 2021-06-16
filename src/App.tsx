@@ -1,3 +1,5 @@
+import { useAppSelector } from "helpers/hooks/redux";
+
 import { Switch, Route } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
 
@@ -10,12 +12,11 @@ import Projects from "pages/Projects/Projects";
 import Header from "components/Header/Header";
 import * as S from "./App.styled";
 
-// Styles
-import { darkTheme, lightTheme } from "helpers/styles";
-
 const App = (): JSX.Element => {
+  const theme = useAppSelector(({ theme }) => theme);
+
   return (
-    <ThemeProvider theme={darkTheme}>
+    <ThemeProvider theme={theme}>
       <S.AppWrapper>
         <Header />
         <Switch>
