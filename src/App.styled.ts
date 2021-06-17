@@ -10,6 +10,10 @@ export const AppWrapper = styled.div`
 
   h1, h2, h3, h4, p {
     margin: 0;
+
+    &.bold {
+      font-weight: 600;
+    }
   }
 
   h1, h2 {
@@ -19,6 +23,10 @@ export const AppWrapper = styled.div`
 
   .farro {
     font-family: ${({ theme }) => theme.fonts.farro};
+
+    &.bold {
+      font-weight: 500;
+    }
   }
 
   .code {

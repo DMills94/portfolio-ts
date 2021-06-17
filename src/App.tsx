@@ -1,5 +1,4 @@
 import { useAppSelector } from "helpers/hooks/redux";
-
 import { Switch, Route } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
 

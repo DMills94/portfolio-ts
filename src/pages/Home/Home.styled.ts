@@ -6,5 +6,5 @@ export const Wrapper = styled.div`
   background-image: ${props => props.theme.backgroundImage};
   display: flex;
   justify-content: center;
-  min-height: calc(100vh - 100px);
+  min-height: 100vh;
 `;
