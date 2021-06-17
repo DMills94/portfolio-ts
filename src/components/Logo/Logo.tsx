@@ -1,13 +1,18 @@
 import * as S from "./Logo.styled";
 
-const Logo = () : JSX.Element => {
+interface ILogo {
+  animated?: boolean
+}
+
+const Logo = ({ animated = false }: ILogo): JSX.Element => {
+  const LogoWrapper = animated ? S.AnimatedWrapper : S.Wrapper;
   return (
-    <S.Wrapper className="logo farro">
+    <LogoWrapper className="logo farro">
       <S.Slash>/</S.Slash>
       <S.Bracket>&gt;</S.Bracket>
       <S.LetterM>M</S.LetterM>
-    </S.Wrapper>
-  )
+    </LogoWrapper>
+  );
 };
 
 export default Logo;

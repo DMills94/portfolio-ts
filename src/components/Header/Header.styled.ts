@@ -23,11 +23,12 @@ export const Wrapper = styled.div`
 `;
 
 export const NavItem = styled(Link)`
+  align-items: center;
   border-radius: 16px;
   color: ${({ theme }) => theme.colours.font};
-  margin-right: 2rem;
+  display: flex;
   font-size: 2rem;
-  font-size: bold;
+  margin-right: 2rem;
   position: relative;
   text-decoration: none;
 
