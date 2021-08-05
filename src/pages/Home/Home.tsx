@@ -9,8 +9,8 @@ const Home = (): JSX.Element => {
     <S.Wrapper>
       <S.LogoWrapper>
         <Logo animated />
-        <h2 className="avid">avid</h2>
-        <h2 className="ills">ills</h2>
+        <div className="name avid">avid</div>
+        <div className="name ills">ills</div>
       </S.LogoWrapper>
     </S.Wrapper>
   );

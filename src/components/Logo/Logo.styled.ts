@@ -1,14 +1,5 @@
 import styled, { keyframes } from "styled-components";
 
-export const Wrapper = styled.div`
-  color: ${({ theme }) => theme.colours.yellow};
-  display: flex;
-  font-family: ${({ theme }) => theme.fonts.farro};
-  font-size: 1em;
-  line-height: 1;
-  position: relative;
-`;
-
 export const Slash = styled.div`
   font-size: 1em;
   height: 100%;
@@ -33,15 +24,34 @@ export const LetterM = styled.div`
   position: relative;
 `;
 
+export const Wrapper = styled.div`
+  color: ${({ theme }) => theme.colours.yellow};
+  display: flex;
+  font-family: ${({ theme }) => theme.fonts.farro};
+  font-size: 1em;
+  line-height: 1;
+  position: relative;
+
+  &.on-header {
+    ${Slash}, ${Bracket} {
+      color: ${({ theme }) => theme.colours.black}
+    }
+
+    ${LetterM} {
+      color: ${({ theme }) => theme.colours.red};
+    }
+  }
+`;
+
 const letterDAnimation = keyframes`
   0% { bottom: 0; }
-  100% { bottom: 60px; }
+  100% { bottom: 25%; }
 `;
 
 const letterMAnimation = keyframes`
   0% { left: -25%; top: 0; }
-  50% { left: -25%; top: 60px; }
-  100% { left: -40%; top: 60px; }
+  50% { left: -25%; top: 25%; }
+  100% { left: -40%; top: 25%; }
 `;
 
 export const AnimatedWrapper = styled(Wrapper)`

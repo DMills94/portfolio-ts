@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 export const AppWrapper = styled.div`
-  background-color: ${({ theme }) => theme.background.backgroundColour};
-  background-image: ${({ theme }) => theme.background.backgroundImage};
+  background-color: ${({ theme }) => theme.globals.backgroundColour};
+  background-image: ${({ theme }) => theme.globals.backgroundImage};
   color: ${({ theme }) => theme.colours.font};
   font-family: ${({ theme }) => theme.fonts.openSans};
   line-height: 1.5;

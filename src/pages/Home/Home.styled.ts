@@ -14,23 +14,25 @@ export const Wrapper = styled.div`
   justify-content: center;
   min-height: 100vh;
 
-  h2 {
+  .name {
     animation: 1s ${fullNameAnimation} 3s;
     animation-fill-mode: forwards;
     font-size: 3rem;
+    line-height: 1;
     position: absolute;
     opacity: 0;
   }
 
   .avid {
-    top: 115px;
+    top: 45%;
     left: 50%;
+    color: ${props => props.theme.globals.font};
   }
 
   .ills {
-    color: ${props => props.theme.colours.yellow};
     left: 60%;
-    top: 230px;
+    top: 94%;
+    color: ${props => props.theme.colours.yellow};
   }
 `;
 

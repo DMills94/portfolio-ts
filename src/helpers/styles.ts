@@ -4,22 +4,24 @@ interface Fonts {
   readonly openSans: string,
 }
 
-interface Background {
+interface Globals {
   readonly backgroundColour: string,
   readonly backgroundImage: string,
+  readonly headerColour: string,
 }
 
 interface Colours {
   readonly black: string,
-  readonly blue: string,
+  readonly red: string,
   readonly font?: string,
   readonly grey: string,
+  readonly lightGrey: string,
   readonly white: string,
   readonly yellow: string,
 }
 
 export interface Theme {
-  readonly background: Background,
+  readonly globals: Globals,
   readonly colours: Colours,
   readonly fonts: Fonts,
   readonly name: string,
@@ -27,16 +29,18 @@ export interface Theme {
 
 export const colours: Colours = {
   black: "#111",
-  blue: "#14213D",
-  grey: "#E5E5E5",
+  red: "#F72C25",
+  grey: "#555",
+  lightGrey: "#AAA",
   white: "#FFF",
-  yellow: "#FCA311",
+  yellow: "#FCE205", // "#FCA311",
 }
 
 export const darkTheme: Theme = {
-  background: {
+  globals: {
     backgroundColour: "#2d3436",
     backgroundImage: "linear-gradient(315deg, #2d3436 0%, #000000 74%)",
+    headerColour: colours.grey,
   },
   colours: {
     ...colours,
@@ -51,9 +55,10 @@ export const darkTheme: Theme = {
 }
 
 export const lightTheme: Theme = {
-  background: {
+  globals: {
     backgroundColour: "#feffff",
     backgroundImage: "linear-gradient(to bottom right, #feffff 71%, #fefcb3 100%)",
+    headerColour: colours.red,
   },
   colours: {
     ...colours,

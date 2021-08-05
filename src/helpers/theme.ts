@@ -20,7 +20,13 @@ const determineTheme = (initialLoad = false): Theme => {
     else themeToUse = storedTheme === "dark" ? lightTheme : darkTheme;
   }
   else {
-    if (browserDefaultIsDarkMode) themeToUse = darkTheme;
+    if (browserDefaultIsDarkMode) {
+      themeToUse = darkTheme;
+      window.localStorage.setItem("theme", "dark");
+    }
+    else {
+      window.localStorage.setItem("theme", "light");
+    }
   }
 
   return themeToUse;

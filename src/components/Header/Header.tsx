@@ -23,12 +23,14 @@ const Header = () : JSX.Element => {
     window.localStorage.setItem("theme", themeName === "light" ? "dark" : "light");
   }
 
+  const solidHeader = pathname === "/";
+
   return (
-    <S.Wrapper className={pathname === "/" ? "homepage" : ""}>
+    <S.Wrapper className={solidHeader ? "homepage" : ""}>
       <nav className="flex">
-        <S.NavItem className="farro bold" to="/"><Logo /></S.NavItem>
-        <S.NavItem className="farro bold" data-text="Abo" to="/about">About</S.NavItem>
-        <S.NavItem className="farro bold" data-text="Proj" to="/projects">Projects</S.NavItem>
+        <S.NavItem className="farro bold" to="/"><Logo extraClasses={solidHeader ? "" : "on-header"} fa-border/></S.NavItem>
+        <S.NavItem className="farro bold" data-text="About" to="/about">About</S.NavItem>
+        <S.NavItem className="farro bold" data-text="Projects" to="/projects">Projects</S.NavItem>
       </nav>
       <FontAwesomeIcon
         className="theme-btn"

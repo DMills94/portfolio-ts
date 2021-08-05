@@ -1,27 +1,6 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
-export const Wrapper = styled.div`
-  align-items: center;
-  background-color: ${({ theme }) => theme.colours.yellow};
-  color: ${({ theme }) => theme.colours.font};
-  display: flex;
-  height: 100px;
-  justify-content: space-between;
-  padding: 0 2rem;
-  position: fixed;
-  transition: all 0.3s ease-out;
-  width: 100%;
-
-  &.homepage {
-    background-color: transparent;
-  }
-
-  .theme-btn {
-    cursor: pointer;
-  }
-`;
-
 export const NavItem = styled(Link)`
   align-items: center;
   border-radius: 16px;
@@ -33,7 +12,6 @@ export const NavItem = styled(Link)`
   text-decoration: none;
 
   &:after {
-    color: ${({ theme }) => theme.colours.yellow};
     content: attr(data-text);
     display: block;
     height: 100%;
@@ -41,7 +19,7 @@ export const NavItem = styled(Link)`
     overflow: hidden;
     position: absolute;
     top: 0;
-    transition: width 0.3s ease-out;
+    transition: width 0.6s ease-out;
     width: 0;
   }
 
@@ -49,5 +27,41 @@ export const NavItem = styled(Link)`
     &:after {
       width: 100%;
     }
+  }
+`;
+
+export const Wrapper = styled.div`
+  align-items: center;
+  background-color: ${({ theme }) => theme.colours.yellow};
+  display: flex;
+  height: 100px;
+  justify-content: space-between;
+  padding: 0 2rem;
+  position: fixed;
+  transition: all 0.3s ease-out;
+  width: 100%;
+
+  ${NavItem} {
+    color: ${({ theme }) => theme.colours.black};
+    &:after {
+      color: ${({ theme }) => theme.colours.red};
+    }
+  }
+
+  &.homepage {
+    background-color: transparent;
+
+  ${NavItem} {
+    color: ${({ theme }) => theme.colours.font};
+    &:after {
+      color: ${({ theme }) => theme.colours.yellow};
+    }
+  }
+}
+    }
+  }
+
+  .theme-btn {
+    cursor: pointer;
   }
 `;
