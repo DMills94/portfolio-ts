@@ -1,4 +1,3 @@
-import { JsxEmit } from "typescript";
 import * as S from "./Layouts.styled";
 
 interface IChildrenProp {
