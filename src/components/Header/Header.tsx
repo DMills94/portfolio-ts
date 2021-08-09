@@ -27,20 +27,21 @@ const Header = () : JSX.Element => {
 
   return (
     <S.Wrapper className={solidHeader ? "homepage" : ""}>
-      <nav className="flex">
-        <S.NavItem className="farro bold" to="/"><Logo extraClasses={solidHeader ? "" : "on-header"} fa-border/></S.NavItem>
-        <S.NavItem className="farro bold" data-text="About" to="/about">About</S.NavItem>
+      <S.NavItem className="farro bold" to="/"><Logo extraClasses={solidHeader ? "" : "on-header"} fa-border/></S.NavItem>
+      <S.Nav className="flex">
+        <S.NavItem className="farro bold" activeClassName="active" data-text="About" to="/about">About</S.NavItem>
         <S.NavItem className="farro bold" data-text="Projects" to="/projects">Projects</S.NavItem>
-      </nav>
-      <FontAwesomeIcon
-        className="theme-btn"
-        icon={faLightbulb}
-        mask={faCircle}
-        onClick={toggleBtnClicked}
-        role="button"
-        size="2x"
-        transform="shrink-5"
-      />
+      </S.Nav>
+      <div className="theme-btn-wrap">
+        <FontAwesomeIcon
+          className="theme-btn"
+          icon={faLightbulb}
+          mask={faCircle}
+          onClick={toggleBtnClicked}
+          role="button"
+          transform="shrink-5"
+        />
+      </div>
     </S.Wrapper>
   );
 }

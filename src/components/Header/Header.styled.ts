@@ -1,13 +1,17 @@
 import styled from "styled-components";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
-export const NavItem = styled(Link)`
+export const Nav = styled.nav`
+  flex-grow: 1;
+  justify-content: space-around;
+`;
+
+export const NavItem = styled(NavLink)`
   align-items: center;
   border-radius: 16px;
   color: ${({ theme }) => theme.colours.font};
   display: flex;
-  font-size: 2rem;
-  margin-right: 2rem;
+  font-size: 1.5rem;
   position: relative;
   text-decoration: none;
 
@@ -32,32 +36,50 @@ export const NavItem = styled(Link)`
 
 export const Wrapper = styled.div`
   align-items: center;
-  background-color: ${({ theme }) => theme.colours.yellow};
+  background-color: ${({ theme }) => theme.colours.grey};
   display: flex;
-  height: 100px;
+  height: 70px;
   justify-content: space-between;
   padding: 0 2rem;
   position: fixed;
   transition: all 0.3s ease-out;
   width: 100%;
 
-  ${NavItem} {
-    color: ${({ theme }) => theme.colours.black};
-    &:after {
-      color: ${({ theme }) => theme.colours.red};
-    }
-  }
-
   &.homepage {
     background-color: transparent;
 
+    ${NavItem} {
+      color: ${({ theme }) => theme.colours.font};
+    }
+  }
+
   ${NavItem} {
-    color: ${({ theme }) => theme.colours.font};
+    color: ${({ theme }) => theme.colours.white};
+
     &:after {
       color: ${({ theme }) => theme.colours.yellow};
     }
+
+    &.active {
+      color: ${({ theme }) => theme.colours.yellow};
+    }
   }
-}
+
+  .theme-btn-wrap {
+    display: block;
+    font-size: 2rem;
+    position: relative;
+    
+    &:before {
+      background-color: ${({ theme }) => theme.globals.themeSwitcher};
+      border-radius: 50%;
+      content: "";
+      display: block;
+      height: 50%;
+      width: 95%;
+      position: absolute;
+      inset: 25% 2.5%;
+      z-index: -1;
     }
   }
 

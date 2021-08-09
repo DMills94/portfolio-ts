@@ -9,8 +9,10 @@ const Logo = ({ animated = false, extraClasses }: ILogo): JSX.Element => {
   const LogoWrapper = animated ? S.AnimatedWrapper : S.Wrapper;
   return (
     <LogoWrapper className={`logo farro ${extraClasses}`}>
-      <S.Slash>/</S.Slash>
-      <S.Bracket>&gt;</S.Bracket>
+      <S.LetterD>
+        <S.Slash>/</S.Slash>
+        <S.Bracket>&gt;</S.Bracket>
+      </S.LetterD>
       <S.LetterM>M</S.LetterM>
     </LogoWrapper>
   );

@@ -31,8 +31,8 @@ export const Wrapper = styled.div`
 
   .ills {
     left: 60%;
-    top: 94%;
-    color: ${props => props.theme.colours.yellow};
+    top: 97%;
+    color: ${props => props.theme.colours.font};
   }
 `;
 
