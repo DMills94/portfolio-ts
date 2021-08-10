@@ -15,7 +15,7 @@ export const Wrapper = styled.div`
   min-height: 100vh;
 
   .name {
-    animation: 1s ${fullNameAnimation} 3s;
+    animation: 1s ${fullNameAnimation} 4s;
     animation-fill-mode: forwards;
     font-size: 3rem;
     line-height: 1;

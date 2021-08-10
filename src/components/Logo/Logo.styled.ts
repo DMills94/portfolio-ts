@@ -48,22 +48,26 @@ export const Wrapper = styled.div`
 `;
 
 const letterDAnimation = keyframes`
-  0% { bottom: 0; }
-  100% { bottom: 60px; }
+  0% { opacity: 0; }
+  50% { bottom: 0; opacity: 1; }
+  100% { bottom: 60px; opacity: 1; }
 `;
 
 const letterMAnimation = keyframes`
-  0% { left: -25%; top: 0; }
-  50% { left: -25%; top: 60px; }
-  100% { left: -40%; top: 60px; }
+  0% { opacity: 0; }
+  33% { left: -25%; top: 0; opacity: 1; }
+  66% { left: -25%; top: 60px; opacity: 1; }
+  100% { left: -40%; top: 60px; opacity: 1; }
 `;
 
 export const AnimatedWrapper = styled(Wrapper)`
   ${LetterD} {
-    animation: 1s forwards ${letterDAnimation} ease-in-out 1s;
+    animation: 2s forwards ${letterDAnimation} ease-in-out 1s;
+    opacity: 0;
   }
 
   ${LetterM} {
-    animation: 2s forwards ${letterMAnimation} ease-in-out 1s;
+    animation: 3s forwards ${letterMAnimation} ease-in-out 1s;
+    opacity: 0;
   }
 `;

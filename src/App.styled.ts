@@ -8,17 +8,8 @@ export const AppWrapper = styled.div`
   line-height: 1.5;
   min-height: 100vh;
 
-  h1, h2, h3, h4, p {
-    margin: 0;
-
-    &.bold {
-      font-weight: 600;
-    }
-  }
-
   h1, h2 {
     font-family: ${({ theme }) => theme.fonts.farro};
-    font-size: 3rem;
   }
 
   .farro {
